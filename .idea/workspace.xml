@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19b8f1db-5bd9-493d-91e2-03a621d7339d" name="Default Changelist" comment="" />
+    <list default="true" id="19b8f1db-5bd9-493d-91e2-03a621d7339d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/music/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/music/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music/templates/music/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/music/templates/music/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music/templates/music/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/music/templates/music/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/music/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/music/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,36 +32,114 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="2" />
-          <entry key="html" value="19" />
-          <entry key="py" value="14" />
+          <entry key="html" value="26" />
+          <entry key="py" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="19" />
-          <entry key="Python" value="14" />
+          <entry key="HTML" value="26" />
+          <entry key="Python" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="49" />
-          <entry key="html" value="1866" />
-          <entry key="py" value="3001" />
+          <entry key="html" value="1942" />
+          <entry key="py" value="3962" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="49" />
-          <entry key="HTML" value="1866" />
-          <entry key="Python" value="3001" />
+          <entry key="HTML" value="1942" />
+          <entry key="Python" value="3962" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Viberr/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/music/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/music/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="15" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1536661813676" expanded="true" signature="267:273" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/music/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="91" column="37" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+                <marker date="1536666330145" expanded="true" signature="482:487" ph="..." />
+                <marker date="1536666330145" expanded="true" signature="664:669" ph="..." />
+                <marker date="1536666330145" expanded="true" signature="755:1046" ph="..." />
+                <marker date="1536666330145" expanded="true" signature="1072:1077" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/music/templates/music/create_song.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="44" column="55" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="55" />
+              <folding>
+                <element signature="e#1046#1074#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/music/templates/music/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="70" column="38" lean-forward="true" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,6 +156,10 @@
       <find>container-fluid songs-container</find>
       <find>navbar-brand</find>
       <find>add album</find>
+      <find>view</find>
+      <find>View all</find>
+      <find>View All</find>
+      <find>href</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -82,16 +172,17 @@
         <option value="$PROJECT_DIR$/music/static/music/style.css" />
         <option value="$PROJECT_DIR$/music/templates/music/form_template.html" />
         <option value="$PROJECT_DIR$/music/templates/music/base.html" />
-        <option value="$PROJECT_DIR$/music/models.py" />
         <option value="$PROJECT_DIR$/Viberr/settings.py" />
         <option value="$PROJECT_DIR$/Viberr/urls.py" />
-        <option value="$PROJECT_DIR$/music/templates/music/detail.html" />
-        <option value="$PROJECT_DIR$/music/forms.py" />
-        <option value="$PROJECT_DIR$/music/views.py" />
-        <option value="$PROJECT_DIR$/music/urls.py" />
         <option value="$PROJECT_DIR$/music/templates/music/album_form.html" />
         <option value="$PROJECT_DIR$/music/templates/music/registration_form.html" />
+        <option value="$PROJECT_DIR$/music/forms.py" />
+        <option value="$PROJECT_DIR$/music/models.py" />
         <option value="$PROJECT_DIR$/music/templates/music/index.html" />
+        <option value="$PROJECT_DIR$/music/urls.py" />
+        <option value="$PROJECT_DIR$/music/templates/music/detail.html" />
+        <option value="$PROJECT_DIR$/music/templates/music/create_song.html" />
+        <option value="$PROJECT_DIR$/music/views.py" />
       </list>
     </option>
   </component>
@@ -102,9 +193,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="713" />
+    <option name="x" value="712" />
     <option name="y" value="27" />
-    <option name="width" value="653" />
+    <option name="width" value="654" />
     <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -133,6 +224,18 @@
               <item name="Viberr" type="462c0819:PsiDirectoryNode" />
               <item name="music" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Viberr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Viberr" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Viberr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Viberr" type="462c0819:PsiDirectoryNode" />
+              <item name="Viberr" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -200,8 +303,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="59" y="27" width="1307" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23552737" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24742268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -215,7 +319,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.31687897" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3570248" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3570248" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3289256" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -245,91 +349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/music/templates/music/form_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1536653689711" expanded="true" signature="267:273" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Viberr/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Viberr/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="78" selection-start-line="4" selection-start-column="78" selection-end-line="4" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-            <marker date="1536655037246" expanded="true" signature="181:182" ph="..." />
-            <marker date="1536655037246" expanded="true" signature="181:187" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="41" column="44" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <marker date="1536656014167" expanded="true" signature="369:374" ph="..." />
-            <marker date="1536656014167" expanded="true" signature="551:556" ph="..." />
-            <marker date="1536656014167" expanded="true" signature="642:933" ph="..." />
-            <marker date="1536656014167" expanded="true" signature="961:966" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music/templates/music/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="43" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music/templates/music/album_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/music/templates/music/registration_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -344,10 +363,107 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/music/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding>
+            <marker date="1536661167477" expanded="true" signature="206:207" ph="..." />
+            <marker date="1536661167477" expanded="true" signature="206:212" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Viberr/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Viberr/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/music/templates/music/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="220">
+          <caret line="44" column="20" lean-forward="true" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1536661813676" expanded="true" signature="267:273" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/templates/music/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="70" column="38" lean-forward="true" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/templates/music/form_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/templates/music/create_song.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="55" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="55" />
+          <folding>
+            <element signature="e#1046#1074#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/templates/music/album_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="91" column="37" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1536666330145" expanded="true" signature="482:487" ph="..." />
+            <marker date="1536666330145" expanded="true" signature="664:669" ph="..." />
+            <marker date="1536666330145" expanded="true" signature="755:1046" ph="..." />
+            <marker date="1536666330145" expanded="true" signature="1072:1077" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
