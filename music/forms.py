@@ -2,12 +2,18 @@ from django.contrib.auth.models import User
 from django import forms
 from .models import Album, Song
 
+# *
+# [AlbumForm]: Form for Album creation.
+
 
 class AlbumForm(forms.ModelForm):
 
     class Meta:
         model = Album
         fields = ['artist', 'album_title', 'genre', 'album_logo']
+
+# *
+# [UserForm]: Form for User signup.
 
 
 class UserForm(forms.ModelForm):
@@ -16,6 +22,9 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password']
+
+# *
+# [SongForm]: Form for song creation.
 
 
 class SongForm(forms.ModelForm):
