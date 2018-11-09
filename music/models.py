@@ -10,6 +10,7 @@ class Album(models.Model):
     album_logo = models.FileField()
     is_favorite = models.BooleanField(default=False)
 
+    # Returns album title along with artist for particular album.
     def __str__(self):
         return self.album_title + ' - ' + self.artist
 
@@ -20,5 +21,6 @@ class Song(models.Model):
     audio_file = models.FileField(default='')
     is_favorite = models.BooleanField(default=False)
 
+    # Returns song title from Song model.
     def __str__(self):
         return self.song_title
