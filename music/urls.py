@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+# app_name: For music application. Makes clear to user to which app he/she is working on.
 app_name = 'music'
 urlpatterns = [
     path('', views.index, name='index'),
