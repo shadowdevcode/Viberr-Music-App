@@ -31,4 +31,4 @@ Feel free to add comments/fork it.
 ### Requirements:
 1. Python 3.5.x
 2. Django 2.1.1
-3. Pip3 18.x 
+3. Pip 18.x 
