@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.db.models import Q
+from django.urls import reverse_lazy
 from .models import Album, Song
 from .forms import AlbumForm, UserForm, SongForm
 
@@ -289,7 +290,8 @@ def register(request):
 # [songs]: Takes filter_by generic parameter to retreive all the records so far for songs of the authenticated user.
 # songs_ids: Empty list to store song's id from albums mapped to it.
 # album: Get all objects of Album from the db.
-# song: Performs 2 queries; One for Albums mapped to it as foreign key and has access to its variables. Second get all objects of it from db.
+# song: Performs 2 queries; One for Albums mapped to it as foreign key and has
+# access to its variables. Second get all objects of it from db.
 # filter_by check with favourites, Show the records maked True for is_favourite from db.
 # render to songs html to show user_songs and filtered content passed as parameter.
 #

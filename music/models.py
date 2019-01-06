@@ -24,3 +24,6 @@ class Song(models.Model):
     # Returns song title from Song model.
     def __str__(self):
         return self.song_title
+
+    def get_absolute_url(self):
+        return reverse('music:detail', args=[str(self.id)])
