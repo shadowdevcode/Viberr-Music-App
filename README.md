@@ -1,4 +1,4 @@
-# :musical_note:  Viberr Music Application  :musical_score:
+# :musical_note:    Viberr Music Application    :musical_score:
 
 ## What is Viberr?
 
@@ -23,4 +23,4 @@ any device, anywhere in the world.
 ![Viberr-music-app-preview](https://user-images.githubusercontent.com/39980643/51792345-b0d4d680-21d5-11e9-8b0b-af26bf4430c2.gif)
 
 
-~ Perfect for *beginners* who are new to Django Feel free to fork it
+~ Perfect for **beginners** who are new to Django Feel free to fork it
