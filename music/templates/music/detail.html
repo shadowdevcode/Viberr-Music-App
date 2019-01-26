@@ -47,7 +47,6 @@
                         <tr>
                             <th>Title</th>
                             <th>Audio File</th>
-                            <th>Favorite</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -61,9 +60,6 @@
                                             <span class="glyphicon glyphicon-play"></span>&nbsp; Play
                                         </button>
                                     </a>
-                                </td>
-                                <td>
-                                    <a href="{% url 'music:favorite' song.id %}" class="btn-favorite"><span class="glyphicon glyphicon-star {% if song.is_favorite %}active{% endif %}"></span></a>
                                 </td>
                                 <td>
                                     <form action="{% url 'music:delete_song' album.id song.id %}" method="post" style="display: inline;">

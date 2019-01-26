@@ -10,9 +10,7 @@ urlpatterns = [
     path('logout_user/', views.LogoutView.as_view(), name='logout_user'),
     # /music/71/
     path('<int:pk>/', views.AlbumDetail.as_view(), name='detail'),
-    # /music/<int:song_id>/favorite
-    path('<int:song_id>/favorite/', views.favorite, name='favorite'),
-    path(r'^songs/(?P<filter_by>[a-zA_Z]+)/$', views.songs, name='songs'),
+    path(r'songs/(?P<filter_by>[a-zA_Z]+)/', views.songs, name='songs'),
     # /music/album/add/
     path('album/add/', views.AlbumCreate.as_view(), name='create_album'),
     # /music/album/1
@@ -23,5 +21,4 @@ urlpatterns = [
     path('<int:album_id>/delete_song/<int:song_id>/', views.delete_song, name='delete_song'),
     # /music/album/2/delete/
     path('album/<int:pk>/delete/', views.AlbumDelete.as_view(), name='delete_album'),
-    path('album/<int:album_id>/favorite_album/', views.favorite_album, name='favorite_album'),
 ]

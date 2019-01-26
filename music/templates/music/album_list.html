@@ -32,11 +32,6 @@
                                 </button>
                             </form>
 
-                            <!-- Favorite Album -->
-                            <a href="{% url 'music:favorite_album' album.id %}" class="btn btn-default btn-sm btn-favorite" role="button">
-                                <span class="glyphicon glyphicon-star {% if album.is_favorite %}active{% endif %}"></span>
-                            </a>
-
                         </div>
                     </div>
                 </div>
@@ -70,7 +65,6 @@
                                     <th>Artist</th>
                                     <th>Audio File</th>
                                     <th>Album</th>
-                                    <th>Favorite</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -90,9 +84,6 @@
                                                 <img src="{{ song.album.album_logo.url }}" class="img-responsive" style="width: 20px; float: left; margin-right: 10px;" />
                                             </a>
                                             <a href="{% url 'music:detail' song.album.id %}">{{ song.album.album_title }}</a>
-                                        </td>
-                                        <td>
-                                            <a href="{% url 'music:favorite' song.id %}" class="btn-favorite"><span class="glyphicon glyphicon-star {% if song.is_favorite %}active{% endif %}"></span></a>
                                         </td>
                                     </tr>
                                 {% endfor %}

@@ -34,6 +34,8 @@ class IndexView(LoginRequiredMixin, ListView):
         return Album.objects.filter(user = self.request.user)
 
 
+
+
 # def index(request):
 #     if not request.user.is_authenticated:
 #         return render(request, 'music/login.html')
@@ -229,19 +231,6 @@ def delete_song(request, album_id, song_id):
 #
 
 
-def favorite(request, song_id):
-    song = get_object_or_404(Song, pk=song_id)
-    try:
-        if song.is_favorite:
-            song.is_favorite = False
-        else:
-            song.is_favorite = True
-        song.save()
-    except (KeyError, Song.DoesNotExist):
-        return ({'success': False})
-    else:
-        return JsonResponse({'success': True})
-
 # *
 # [favourite_album]: Uses album_id as paramter to make album as favourite.
 # album: Going to query album model in class Album and retreive all objects in the db with id as a parameter passed or else give 404 error
@@ -250,19 +239,6 @@ def favorite(request, song_id):
 # album.save(): Will save the is_favourite value in the db with updated record.
 # Will give a JSON output as specific message.
 
-
-def favorite_album(request, album_id):
-    album = get_object_or_404(Album, pk=album_id)
-    try:
-        if album.is_favorite:
-            album.is_favorite = False
-        else:
-            album.is_favorite = True
-        album.save()
-    except (KeyError, Album.DoesNotExist):
-        return JsonResponse({'success': False})
-    else:
-        return JsonResponse({'success': True})
 
 # *
 # [login_user]: For loging in for user. Has a form with username and password as enteries.
@@ -387,8 +363,8 @@ def songs(request, filter_by):
                 for song in album.song_set.all():
                     song_ids.append(song.pk)
             users_songs = Song.objects.filter(pk__in=song_ids)
-            if filter_by == 'favorites':
-                users_songs = users_songs.filter(is_favorite=True)
+            if filter_by == 'q':
+                users_songs = users_songs.filter(filter_by)
         except Album.DoesNotExist:
             users_songs = []
         return render(request, 'music/songs.html', {
