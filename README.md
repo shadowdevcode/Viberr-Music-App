@@ -10,10 +10,8 @@ any device, anywhere in the world.
 
 1. Python 3.5.x
 1. Django 2.1.1 : Install using ```pip install django```
-1. Use of Virtual Environments - Kindly create one and activate it using:
+1. Use of Virtual Environments - Kindly create one and activate it using: ```python3 -m venv <env_name>```
 1. Use of Class Based Views
-
-> ```python3 -m venv <env_name>```
 
 ## Resources:
 
@@ -24,4 +22,5 @@ any device, anywhere in the world.
 
 ![Viberr-music-app-preview](https://user-images.githubusercontent.com/39980643/51792345-b0d4d680-21d5-11e9-8b0b-af26bf4430c2.gif)
 
-> Perfect for beginners who are new to Django Feel free to fork it
+
+~ Perfect for *beginners* who are new to Django Feel free to fork it
