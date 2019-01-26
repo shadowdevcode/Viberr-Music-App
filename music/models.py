@@ -1,5 +1,6 @@
 from django.contrib.auth.models import Permission, User
 from django.db import models
+from django.urls import reverse
 
 
 class Album(models.Model):
@@ -7,12 +8,16 @@ class Album(models.Model):
     album_title = models.CharField(max_length=250)
     artist = models.CharField(max_length=250)
     genre = models.CharField(max_length=250)
-    album_logo = models.FileField()
+    album_logo = models.CharField(max_length=1000)
     is_favorite = models.BooleanField(default=False)
 
     # Returns album title along with artist for particular album.
     def __str__(self):
         return self.album_title + ' - ' + self.artist
+
+
+    def get_absolute_url(self):
+        return reverse('music:album_list')
 
 
 class Song(models.Model):

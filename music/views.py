@@ -6,6 +6,9 @@ from django.db.models import Q
 from django.urls import reverse_lazy
 from .models import Album, Song
 from .forms import AlbumForm, UserForm, SongForm
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import ListView, DetailView, View
 
 AUDIO_FILE_TYPES = ['wav', 'mp3', 'ogg']
 IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
@@ -19,22 +22,34 @@ IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
 #
 
 
-def index(request):
-    if not request.user.is_authenticated:
-        return render(request, 'music/login.html')
-    else:
-        albums = Album.objects.filter(user=request.user)
-        song_results = Song.objects.all()
-        query = request.GET.get("q")
-        if query:
-            albums = albums.filter(Q(album_title__icontains=query) | Q(artist__icontains=query)).distinct()
-            song_results = song_results.filter(Q(song_title__icontains=query)).distinct()
-            return render(request, 'music/index.html', {
-                'albums': albums,
-                'songs': song_results,
-            })
-        else:
-            return render(request, 'music/index.html', {'albums': albums})
+class IndexView(LoginRequiredMixin, ListView):
+    login_url = 'login_user/'
+    redirect_field_name = 'redirect_to'
+    model = Album
+    template_name = 'music/album_list.html'
+    context_object_name = 'albums'
+
+    ''' get_queryset: Get the list of items for this view '''
+    def get_queryset(self):
+        return Album.objects.filter(user = self.request.user)
+
+
+# def index(request):
+#     if not request.user.is_authenticated:
+#         return render(request, 'music/login.html')
+#     else:
+#         albums = Album.objects.filter(user=request.user)
+#         song_results = Song.objects.all()
+#         query = request.GET.get("q")
+#         if query:
+#             albums = albums.filter(Q(album_title__icontains=query) | Q(artist__icontains=query)).distinct()
+#             song_results = song_results.filter(Q(song_title__icontains=query)).distinct()
+#             return render(request, 'music/index.html', {
+#                 'albums': albums,
+#                 'songs': song_results,
+#             })
+#         else:
+#             return render(request, 'music/index.html', {'albums': albums})
 
 # *
 # Is_authenticated: Is used to to authenticate the user and if he is not, then render to Login Page again.
@@ -42,14 +57,19 @@ def index(request):
 # After authenticated user is logged in, shows the details page to user containing albums created of that user.
 #
 
+class AlbumDetail(LoginRequiredMixin, DetailView):
+    login_url = 'login_user/'
+    redirect_field_name = 'redirect_to'
+    model = Album
+    template_name = 'music/detail.html'
 
-def detail(request, album_id):
-    if not request.user.is_authenticated:
-        return render(request, 'music/login.html')
-    else:
-        user = request.user
-        album = get_object_or_404(Album, pk=album_id)
-        return render(request, 'music/detail.html', {'album': album, 'user': user})
+# def detail(request, album_id):
+#     if not request.user.is_authenticated:
+#         return render(request, 'music/login.html')
+#     else:
+#         user = request.user
+#         album = get_object_or_404(Album, pk=album_id)
+#         return render(request, 'music/detail.html', {'album': album, 'user': user})
 
 # *
 # Is_authenticated: Is used to to authenticate the user and if he is not, then render to Login Page again.
@@ -62,30 +82,56 @@ def detail(request, album_id):
 # Otherwise, album.save() is going to save in the db and render to details page with albums listed if you have uploaded any.
 
 
-def create_album(request):
-    if not request.user.is_authenticated:
-        return render(request, 'music/login.html')
-    else:
-        form = AlbumForm(request.POST or None, request.FILES or None)
-        if form.is_valid():
-            album = form.save(commit=False)
-            album.user = request.user
-            album.album_logo = request.FILES['album_logo']
-            file_type = album.album_logo.url.split('.')[-1]
-            file_type = file_type.lower()
-            if file_type not in IMAGE_FILE_TYPES:
-                context = {
-                    'album': album,
-                    'form': form,
-                    'error_message': 'Image file must be PNG, JPG, or JPEG',
-                }
-                return render(request, 'music/create_album.html', context)
-            album.save()
-            return render(request, 'music/detail.html', {'album': album})
-        context = {
-            "form": form,
-        }
-        return render(request, 'music/create_album.html', context)
+class AlbumCreate(LoginRequiredMixin, CreateView):
+    login_url = 'login_user/'
+    redirect_field_name = 'redirect_to'
+    model = Album
+    fields = ['album_title','artist','genre','album_logo']
+
+    def form_valid(self, form):
+        object = form.save(commit=False)
+        object.user = self.request.user
+        object.save()
+        return super(AlbumCreate, self).form_valid(form)
+
+
+class AlbumUpdate(LoginRequiredMixin, UpdateView):
+    login_url = 'login_user/'
+    redirect_field_name = 'redirect_to'
+    model = Album
+    fields = ['album_title','artist','genre','album_logo']
+
+    def form_valid(self, form):
+        object = form.save(commit=False)
+        object.user = self.request.user
+        object.save()
+        return super(AlbumUpdate, self).form_valid(form)
+
+
+# def create_album(request):
+#     if not request.user.is_authenticated:
+#         return render(request, 'music/login.html')
+#     else:
+#         form = AlbumForm(request.POST or None, request.FILES or None)
+#         if form.is_valid():
+#             album = form.save(commit=False)
+#             album.user = request.user
+#             album.album_logo = request.FILES['album_logo']
+#             file_type = album.album_logo.url.split('.')[-1]
+#             file_type = file_type.lower()
+#             if file_type not in IMAGE_FILE_TYPES:
+#                 context = {
+#                     'album': album,
+#                     'form': form,
+#                     'error_message': 'Image file must be PNG, JPG, or JPEG',
+#                 }
+#                 return render(request, 'music/create_album.html', context)
+#             album.save()
+#             return render(request, 'music/detail.html', {'album': album})
+#         context = {
+#             "form": form,
+#         }
+#         return render(request, 'music/create_album.html', context)
 
 # *
 # [delete_album] : Going to delte the album uploaded specific to the user. Takes album id (Primary Key) and parameter to make sure only album with passed album_id will be deleted.
@@ -95,12 +141,17 @@ def create_album(request):
 # After exceution is done, render to Index page with albums listed.
 #
 
+class AlbumDelete(LoginRequiredMixin, DeleteView):
+    login_url = 'login_user/'
+    redirect_field_name = 'redirect_to'
+    model = Album
+    success_url = reverse_lazy('music:album_list')
 
-def delete_album(request, album_id):
-    album = Album.objects.get(pk=album_id)
-    album.delete()
-    albums = Album.objects.filter(user=request.user)
-    return render(request, 'music/index.html', {'albums': albums})
+# def delete_album(request, album_id):
+#     album = Album.objects.get(pk=album_id)
+#     album.delete()
+#     albums = Album.objects.filter(user=request.user)
+#     return render(request, 'music/index.html', {'albums': albums})
 
 # *
 # [create_song]: Takes parameter as album_id specific to the album uploaded.
@@ -223,8 +274,9 @@ def favorite_album(request, album_id):
 #
 
 
-def login_user(request):
-    if request.method == "POST":
+class LoginView(View):
+
+    def post(self, request):
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
@@ -232,12 +284,31 @@ def login_user(request):
             if user.is_active:
                 login(request, user)
                 albums = Album.objects.filter(user=request.user)
-                return render(request, 'music/index.html', {'albums': albums})
+                return render(request, 'music/album_list.html', {'albums': albums})
             else:
                 return render(request, 'music/login.html', {'error_message': 'Your account has been disabled'})
         else:
             return render(request, 'music/login.html', {'error_message': 'Invalid login'})
-    return render(request, 'music/login.html')
+
+
+    def get(self, request):
+        return render(request, 'music/login.html')
+
+# def login_user(request):
+#     if request.method == "POST":
+#         username = request.POST['username']
+#         password = request.POST['password']
+#         user = authenticate(username=username, password=password)
+#         if user is not None:
+#             if user.is_active:
+#                 login(request, user)
+#                 albums = Album.objects.filter(user=request.user)
+#                 return render(request, 'music/index.html', {'albums': albums})
+#             else:
+#                 return render(request, 'music/login.html', {'error_message': 'Your account has been disabled'})
+#         else:
+#             return render(request, 'music/login.html', {'error_message': 'Invalid login'})
+#     return render(request, 'music/login.html')
 
 # *
 # [logout_user]: Used to log out the user from the active session.
@@ -246,13 +317,22 @@ def login_user(request):
 #
 
 
-def logout_user(request):
-    logout(request)
-    form = UserForm(request.POST or None)
-    context = {
-        "form": form,
-    }
-    return render(request, 'music/login.html', context)
+class LogoutView(View):
+	def get(self, request):
+		logout(request)
+		form = UserForm(request.POST or None)
+		context = {
+			"form": form,
+		}
+		return render(request, 'music/login.html', context)
+
+# def logout_user(request):
+#     logout(request)
+#     form = UserForm(request.POST or None)
+#     context = {
+#         "form": form,
+#     }
+#     return render(request, 'music/login.html', context)
 
 # *
 # [register]: Used to register user if not signed up. It takes request and returns response.
@@ -280,7 +360,7 @@ def register(request):
             if user.is_active:
                 login(request, user)
                 albums = Album.objects.filter(user=request.user)
-                return render(request, 'music/index.html', {'albums': albums})
+                return render(request, 'music/album_list.html', {'albums': albums})
     context = {
         "form": form,
     }
