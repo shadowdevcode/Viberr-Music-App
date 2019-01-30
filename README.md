@@ -11,7 +11,7 @@ any device, anywhere in the world.
 1. Python 3.5.x
 1. Django 2.1.1 : Install using ```pip install django```
 1. Use of Virtual Environments - Kindly create one and activate it using: ```python3 -m venv <env_name>```
-1. Use of Class Based Views
+1. Use of Generic Class Based Views: Optimized code a bit more. 
 
 ## Resources:
 
